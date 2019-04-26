@@ -2,44 +2,50 @@ require 'homework05/version'
 
 class Person
   # add your implementation here
-  attr_accessor :person
+  attr_accessor :person, :output
 
   def initialize (person)
     @person = person
+    @output = person
   end
 
   def name
-    
+    "#{@person}"
   end
 
   def to_s
     #returns to the string representation of our person instance
-    @person
+    "#{@output}"
   end
   
   def titlelize
     #converts the first character of the first_name to uppercase
-     "#{self.person.split.each{|letter| letter.capitalize!}.join(' ')}"
+    title_person = "#{self.person.split.each{|letter| letter.capitalize!}.join(' ')}"
+    @output = title_person
   end
 
   def upcase
     #converts all the characters of the first_name to upper case
-    person = "#{@person.split.each{|letter| letter.upcase!}.join(' ')}"
+    up_person = "#{person.split.each{|letter| letter.upcase!}.join(' ')}"
+    @output = up_person
   end
   
   def downcase
     #converst all the characters of the first_name to lower case
-    "#{@person.downcase!}"
+    down_person = "#{person.split.each{|letter| letter.downcase!}.join(' ')}"
+    @output = down_person
   end
 
   def reverse
     #reverses the characters of the first_name
-    "#{self.person.reverse!}"
+    rev_person = "#{person.split.each{|letter| letter.reverse!}.join(' ')}"
+    @output = rev_person
   end
 
   def hyphenize
     #adds a hyphenize between each character of the first_name
-    "#{self.person.split.map { |s| s.split("")}.join("-")}"
+    hyp_person = "#{person.split.map { |s| s.split("")}.join("-")}"
+    @output = hyp_person
   end
 
   def undo
@@ -47,4 +53,3 @@ class Person
   end
 
 end
-
