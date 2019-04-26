@@ -19,25 +19,27 @@ class Person
   
   def titlelize
     #converts the first character of the first_name to uppercase
-     = "#{self.person.split.each{|letter| letter.capitalize!}.join(' ')}"
+     "#{self.person.split.each{|letter| letter.capitalize!}.join(' ')}"
   end
 
   def upcase
     #converts all the characters of the first_name to upper case
-   # person = "#{@person.split.each{|letter| letter.upcase!}.join(' ')}"
-    to_s
+    person = "#{@person.split.each{|letter| letter.upcase!}.join(' ')}"
   end
   
   def downcase
     #converst all the characters of the first_name to lower case
+    "#{@person.downcase!}"
   end
 
   def reverse
     #reverses the characters of the first_name
+    "#{self.person.reverse!}"
   end
 
   def hyphenize
     #adds a hyphenize between each character of the first_name
+    "#{self.person.split.map { |s| s.split("")}.join("-")}"
   end
 
   def undo
